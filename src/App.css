@@ -4,7 +4,7 @@ body {
   background-color: #eaf6ea;
   font-family: "Karla", serif;
 }
-label{
+label {
   margin-bottom: 10px;
 }
 .form {
@@ -12,31 +12,26 @@ label{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
-  
-  /* width: 100%; */
 }
 .container {
-  width: 600px; 
+  width: 600px;
   background-color: #ffffff;
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: auto;
 }
-
 .fullname {
   display: flex;
   gap: 15px;
 }
-
 .fieldsname {
   display: flex;
   flex-direction: column;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   flex: 1;
 }
-.fieldsname input{
+.fieldsname input {
   width: 100%;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -46,22 +41,26 @@ input[type="text"], input[type="email"], textarea {
   border: 1px solid #ccc; /* Optional: Add a border color */
   /* padding: 10px; Optional: Add padding for better spacing */
 }
-.radio-group{
+.radio-group {
   display: flex;
   margin-bottom: 20px;
   margin-top: 10px;
   gap: 10px;
-  div{
-    border: 1px solid #ccc;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    label{
-      font-size: 16px;
-    }
-  }
 }
-button{
+.radio {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+.radio.active {
+  background-color: rgba(0, 128, 0, 0.13); /* Change to your desired active color */
+  border:2px solid hsl(169, 82%, 27%);
+}
+.radio label {
+  font-size: 16px;
+}
+button {
   width: 100%;
   padding: 12px;
   background-color: hsl(169, 82%, 27%);
@@ -71,15 +70,38 @@ button{
   margin-top: 20px;
   margin-bottom: 20px;
 }
+input:hover {
+  cursor: pointer;
+}
+textarea:hover {
+  cursor: pointer;
+}
+input:focus, textarea:focus {
+  outline: none; /* This removes the default focus outline */
+  border:2px solid hsl(169, 82%, 27%); /* This adds the green border */
+  caret-color: transparent;
+}
+.success-message {
+  background-color: hsl(169, 82%, 27%); 
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 20px auto;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 
 @media (max-width: 500px) {
-  h2{
+  h2 {
     padding-top: 80px;
   }
-  .radio-group{
+  .radio-group {
     flex-direction: column;
   }
-  .fullname{
+  .fullname {
     flex-direction: column;
   }
 }
